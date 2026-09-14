@@ -1,0 +1,29 @@
+{
+  "cue_path": "I:\\Projects\\PSX-Ports-pilot\\_disc\\misadventures-of-tron-bonne\\Misadventures of Tron Bonne, The (Europe).cue",
+  "cue_name": "Misadventures of Tron Bonne, The (Europe).cue",
+  "bin_name": "Misadventures of Tron Bonne, The (Europe) (Track 1).bin",
+  "track_count": 2,
+  "data_track_size": 349947024,
+  "data_track_md5": "8f2e4a1fc24643fcecdfdd8f5d9b4646",
+  "data_track_sha1": "bd24f4400d59ea258753e8096de890f1f2c37eb9",
+  "data_track_crc32": "e9101133",
+  "boot_exe": "SLES_027.95",
+  "serial": "SLES-02795",
+  "serial_exe": "SLES_027.95",
+  "volume_id": "TRON_BONNE",
+  "display_name": "The Misadventures of Tron Bonne",
+  "load_address": "0x80010000",
+  "entry_pc": "0x80012618",
+  "text_size": "0x0004A800",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "7b5b761fba54e12e65eab675a5cbcf859a2d5da3212bc05447bd3f83a3ac4261",
+  "boot_exe_sha256": "5a19d8c9746cc7daa308a8b46239369fede13f149d2ffea32c99b9854f1fc27f",
+  "seed_count": 198,
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

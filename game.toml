@@ -1,0 +1,56 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "The Misadventures of Tron Bonne"
+id = "SLES-02795"
+players = 2
+exe = "disc/SLES_027.95"
+disc = "disc/Misadventures of Tron Bonne, The (Europe).cue"
+load_address = "0x80010000"
+entry_pc = "0x80012618"
+text_size = "0x0004A800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Misadventures of Tron Bonne, The (Europe) (Track 1).bin"
+cue_name = "Misadventures of Tron Bonne, The (Europe).cue"
+boot_exe = "SLES_027.95"
+known_sizes = [349947024]
+known_md5 = [
+  "8f2e4a1fc24643fcecdfdd8f5d9b4646",
+]
+known_sha1 = [
+  "bd24f4400d59ea258753e8096de890f1f2c37eb9",
+]
+known_crc32 = [
+  "e9101133",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+window_title = "The Misadventures of Tron Bonne Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 2
+required_disc_fp = "7b5b761fba54e12e65eab675a5cbcf859a2d5da3212bc05447bd3f83a3ac4261"
